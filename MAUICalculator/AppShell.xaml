@@ -8,7 +8,7 @@
 
     <ShellContent
         Title="Calculator"
-        ContentTemplate="{DataTemplate local:Calculator}"
+        ContentTemplate="{DataTemplate local:CalculatorView}"
         Route="Calculator" />
 
 </Shell>

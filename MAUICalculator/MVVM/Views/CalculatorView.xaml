@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MAUICalculator.MVVM.Views.CalculatorView"
+    Title="Calculator"
+>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid RowSpacing="20" BackgroundColor="White" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Text="{Binding Operation}"
+                FontSize="30"
+                FlowDirection="RightToLeft"
+                VerticalTextAlignment="End"
+                Grid.Row="1"
+            />
+
+            <Label
+                Text="{Binding Result}"
+                FontSize="50"
+                FontAttributes="Bold"
+                FlowDirection="RightToLeft"
+                Grid.Row="2"
+            />
+
+        </Grid>
+
+        <Grid Grid.Row="1" RowSpacing="8" ColumnSpacing="8" Padding="8" BackgroundColor= "LightGrey">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Text="AC"
+                FontSize="Large"
+                BackgroundColor="White"
+                TextColor="Orange"
+                Command="{Binding ClearCommand}"
+            />
+            <Button
+                Text="BACK"
+                FontSize="Large"
+                BackgroundColor="White"
+                TextColor="Orange"
+                Grid.Column="1"
+                Command="{Binding BackspaceCommand}"
+            />
+            <Button
+                Text="%"
+                FontSize="Large"
+                BackgroundColor="White"
+                TextColor="Orange"
+                Grid.Column="2"
+                Command="{Binding PercentageCommand}"
+                CommandParameter="%"
+            />
+
+            <Button
+                Text="/"
+                FontSize="Large"
+                BackgroundColor="White"
+                TextColor="Orange"
+                Grid.Column="3"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="/"
+            />
+            <Button
+                Text="*"
+                FontSize="Large"
+                BackgroundColor="White"
+                TextColor="Orange"
+                Grid.Row="1"
+                Grid.Column="3"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="*"
+            />
+            <Button
+                Text="-"
+                FontSize="Large"
+                BackgroundColor="White"
+                TextColor="Orange"
+                Grid.Row="2"
+                Grid.Column="3"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="-"
+            />
+            <Button
+                Text="+"
+                FontSize="Large"
+                BackgroundColor="White"
+                TextColor="Orange"
+                Grid.Row="3"
+                Grid.Column="3"
+                Command="{Binding OperatorCommand}"
+                CommandParameter="+"
+            />
+            <Button
+                Text="="
+                FontSize="Large"
+                BackgroundColor="White"
+                TextColor="Orange"
+                Grid.Row="4"
+                Grid.Column="3"
+                Command="{Binding DoCalculationCommand}"
+            />
+
+            <Button
+                Text="7"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="1"
+                Command="{Binding DigitCommand}"
+                CommandParameter="7"
+            />
+             <Button
+                Text="8"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="1"
+                Grid.Column="1"
+                Command="{Binding DigitCommand}"
+                CommandParameter="8"
+            />
+             <Button
+                Text="9"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="1"
+                Grid.Column="2"
+                Command="{Binding DigitCommand}"
+                CommandParameter="9"
+            />
+             <Button
+                Text="4"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="2"
+                Command="{Binding DigitCommand}"
+                CommandParameter="4"
+            />
+             <Button
+                Text="5"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="2"
+                Grid.Column="1"
+                Command="{Binding DigitCommand}"
+                CommandParameter="5"
+            />
+             <Button
+                Text="6"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="2"
+                Grid.Column="2"
+                Command="{Binding DigitCommand}"
+                CommandParameter="6"
+            />
+             <Button
+                Text="1"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="3"
+                Command="{Binding DigitCommand}"
+                CommandParameter="1"
+            />
+             <Button
+                Text="2"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="3"
+                Grid.Column="1"
+                Command="{Binding DigitCommand}"
+                CommandParameter="2"
+            />
+             <Button
+                Text="3"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="3"
+                Grid.Column="2"
+                Command="{Binding DigitCommand}"
+                CommandParameter="3"
+            />
+            <Button
+                Text="0"
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Command="{Binding DigitCommand}"
+                CommandParameter="0"
+            />
+            <Button
+                Text="."
+                FontSize="Large"
+                BackgroundColor="White"
+                BorderColor="Transparent"
+                TextColor="Black"
+                Grid.Row="4"
+                Grid.Column="2"
+                Command="{Binding DigitCommand}"
+                CommandParameter=","
+            />
+
+        </Grid>
+
+    </Grid>
+</ContentPage>
