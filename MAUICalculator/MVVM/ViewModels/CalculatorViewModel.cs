@@ -67,9 +67,9 @@ namespace MAUICalculator.MVVM.ViewModels
             }
 
             //Controlar puntos flotantes
-            if (Operation.StartsWith("."))
+            if (Operation.StartsWith(","))
             {
-                Operation = "0.";
+                Operation = "0,";
             }
         }
 

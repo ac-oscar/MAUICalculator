@@ -30,8 +30,8 @@
             <Label
                 Text="{Binding Operation}"
                 FontSize="30"
-                FlowDirection="RightToLeft"
                 VerticalTextAlignment="End"
+                HorizontalTextAlignment="End"
                 Grid.Row="1"
             />
 
@@ -39,7 +39,7 @@
                 Text="{Binding Result}"
                 FontSize="50"
                 FontAttributes="Bold"
-                FlowDirection="RightToLeft"
+                HorizontalTextAlignment="End"
                 Grid.Row="2"
             />
 
